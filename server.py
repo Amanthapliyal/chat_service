@@ -34,7 +34,7 @@ while True:
             client_socket, client_address = server_socket.accept()
 
             user = receive_message(client_socket)
-            if user in False :
+            if user == False :
                 continue
 
             sockets_list.append(client_socket)

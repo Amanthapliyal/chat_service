@@ -19,8 +19,9 @@ username_header = f"{len(username):< {HEADER_LENGTH}}".encode("UTF-8")
 client_socket.send(username_header + username)
 
 while True:
+    message = "" 
     message = input(f"{my_username}>")
-    #message = "" 
+    
     if message:
         message = message.encode("utf-8")
         message_header = f"{len(message):<{HEADER_LENGTH}}".encode("utf-8")
