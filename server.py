@@ -3,7 +3,7 @@ import select
 
 HEADER_LENGTH = 10
 IP = "192.168.43.128"
-PORT = 6789
+PORT = 1234
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR ,1)

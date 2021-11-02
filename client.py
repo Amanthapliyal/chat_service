@@ -6,7 +6,7 @@ import sys
 HEADER_LENGTH = 10
 
 IP = "192.168.43.128"
-PORT = 6789
+PORT = 1234
 
 my_username = input("username: ")
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,9 +19,9 @@ username_header = f"{len(username):< {HEADER_LENGTH}}".encode("UTF-8")
 client_socket.send(username_header + username)
 
 while True:
-    message = "" 
     message = input(f"{my_username}>")
-    
+    message = "" 
+
     if message:
         message = message.encode("utf-8")
         message_header = f"{len(message):<{HEADER_LENGTH}}".encode("utf-8")
